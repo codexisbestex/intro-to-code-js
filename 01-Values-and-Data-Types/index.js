@@ -5,7 +5,7 @@
  * Assign it the string of your name.
  */
 
-// Replace this comment with your code.
+let myFirstName = 'Angelique'
 
 /**********************************
  * #2: What's your age?
@@ -94,7 +94,7 @@ describe("01 - Values and Types", () => {
     });
   });
 
-  xdescribe("#2: What's your age?", () => {
+  describe("#2: What's your age?", () => {
     describe("The variable myAge", () => {
       it("should be a number", () => {
         expect(myAge).to.be.a("number");
