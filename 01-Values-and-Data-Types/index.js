@@ -13,8 +13,8 @@ let myFirstName = 'Angelique'
  * Define the variable myAge.
  * Assign it the value of your age.
  */
-
-// Replace this comment with your code.
+ 
+ let myAge = 28
 
 /**********************************
  * #3: In fact, it's super fun.
@@ -23,7 +23,7 @@ let myFirstName = 'Angelique'
  * There's only one right answer here.
  */
 
-// Replace this comment with your code.
+let codingIsFun = true
 
 /**********************************
  * #4: Null and undefined
@@ -35,7 +35,8 @@ let myFirstName = 'Angelique'
  * Assign the value null to isNull and the value undefined to isUndefined.
  */
 
-// Replace this comment with your code.
+let isNull = null
+let isUndefined = undefined
 
 /**********************************
  * #5: Quickest math class ever.
@@ -55,7 +56,13 @@ let myFirstName = 'Angelique'
  * Pass numA and numB in as variables, not as their values.
  */
 
-// Replace this comment with your code.
+const numA = 15
+const numB = 3
+const addedTo = numA + numB
+const subtractedBy = numA - numB
+const multipliedBy = numA * numB
+const dividedBy = numA / numB 
+const moduloOf = numA + numB //possible instructional error? answer is the same as the variable addedTo
 
 /**********************************
  * #6: Numbers and Words, all together
@@ -69,7 +76,7 @@ let myFirstName = 'Angelique'
  * SEE: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#expression_interpolation
  */
 
-// Replace this comment with your code.
+let myDetails = `My name is ${myFirstName} and I'm ${myAge} years old.`
 
 /**
  * The code below is what tests your answers.
@@ -102,7 +109,7 @@ describe("01 - Values and Types", () => {
     });
   });
 
-  xdescribe("#3: In fact, it's super fun", () => {
+  describe("#3: In fact, it's super fun", () => {
     describe("The variable codingIsFun", () => {
       it("should be a boolean value", () => {
         expect(codingIsFun).to.be.a("boolean");
@@ -114,7 +121,7 @@ describe("01 - Values and Types", () => {
     });
   });
 
-  xdescribe("#4: Null and undefined", () => {
+  describe("#4: Null and undefined", () => {
     it("isNull -> should have a `null` value", () => {
       expect(isNull).to.be.a("null");
     });
@@ -124,7 +131,7 @@ describe("01 - Values and Types", () => {
     });
   });
 
-  xdescribe("#5: Quickest Math Class Ever", () => {
+  describe("#5: Quickest Math Class Ever", () => {
     describe("Variable declarations and value assignements", () => {
       it("numA -> assigned a number value of 15", () => {
         expect(numA).to.be.a("number");
@@ -155,7 +162,7 @@ describe("01 - Values and Types", () => {
     });
   });
 
-  xdescribe("#6: Numbers and words, all together", () => {
+  describe("#6: Numbers and words, all together", () => {
     it("myDetails -> is a string", () => {
       expect(myDetails).to.be.a("string");
     });
