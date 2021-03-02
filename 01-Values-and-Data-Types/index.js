@@ -62,7 +62,7 @@ const addedTo = numA + numB
 const subtractedBy = numA - numB
 const multipliedBy = numA * numB
 const dividedBy = numA / numB 
-const moduloOf = numA + numB //possible instructional error? answer is the same as the variable addedTo
+const moduloOf = numA % numB 
 
 /**********************************
  * #6: Numbers and Words, all together
