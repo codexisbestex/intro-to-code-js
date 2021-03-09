@@ -21,8 +21,15 @@ const givenTwo = "cheese" === "cheese"; // true
 const givenThree = 15 / 3 === 5; // true
 const givenFour = 12 > 13; // false
 
-// Replace this comment with your code.
+const andTrue = (givenThree && givenTwo)
+const andFalse = (givenOne && givenFour)
+const orTrue = (givenOne || givenTwo)
+const orFalse =(givenOne || givenFour) 
 
+console.log(andTrue)
+console.log(andFalse)
+console.log(orTrue)
+console.log(orFalse)
 /**********************************
  * #2: 5 characters
  *
@@ -38,8 +45,15 @@ const givenFour = 12 > 13; // false
  * String length: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length
  * Ternary: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
  */
+ const notFiveChars = 'Pain peko'
 
-// Replace this comment with your code.
+ console.log(notFiveChars.length)
+
+ function isItFiveChars(notFiveChars) {
+   return (notFiveChars.length ? "it's 5 characters" : "not 5 characters");
+ }
+ 
+ console.log(isItFiveChars(notFiveChars.length))
 
 /**********************************
  * #3: numberOrString
@@ -56,8 +70,20 @@ const givenFour = 12 > 13; // false
  */
 
 function numberOrString(value) {
-  // Replace this comment with your code inside this function block.
-}
+ if (value == String) {
+   return "This is a string"
+ } else if (value == Number) { 
+   return "This is a number" 
+  } else {
+     return "This is not a string nor a number" 
+    }
+   }
+
+   console.log(numberOrString("Hello"))
+   console.log(numberOrString(20))
+   console.log(numberOrString(true))
+   
+
 
 /**********************************
  * #4: truthyFalsy
@@ -84,7 +110,7 @@ function numberOrString(value) {
  */
 
 function truthyFalsy(value) {
-  // Replace this comment with your code inside this function block.
+
 }
 
 /**********************************
@@ -106,8 +132,20 @@ function truthyFalsy(value) {
  */
 
 function testGrader(grade) {
-  // Replace this comment with your code inside this function block.
+  if (grade >= 90 || grade == 100) {
+    return 'A'
+  } else if (grade <= 89 || grade >= 80 ) {
+    return 'B'
+  } else if (grade <= 79 || grade >= 70) {
+    return 'C'
+  } else if (grade <=69 || grade >= 60) {
+    return 'D'
+  } else (grade < 60); {
+    return 'F'
+  }
 }
+
+console.log(testGrader(85))
 /**********************************
  * #6: daysInTheMonth
  *
@@ -124,7 +162,13 @@ function testGrader(grade) {
  */
 
 function daysInTheMonth(monthNum) {
-  // Replace this comment with your code inside this function block.
+  if (monthNum == 1, 3, 5 ,7, 8, 10, 12) {
+    return 31
+  } else if (monthNum == 4, 6, 9, 11) {
+    return 30
+  } else if (monthNum == 2) {
+    return 28
+}
 }
 /**
  * The code below is what tests your answers.
@@ -159,7 +203,7 @@ describe("02 - Conditionals", () => {
     });
   });
 
-  xdescribe("#2: 5 characters", () => {
+  describe("#2: 5 characters", () => {
     describe("notFiveChars", () => {
       it("is a string that isn't 5 characters long", () => {
         expect(notFiveChars).to.be.a("string").to.not.have.lengthOf(5);
